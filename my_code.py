@@ -1,8 +1,8 @@
 import pytest
 
-def test_fix_phone_num():
-  assert fix_phone_num("5125558823") == '(512) 555 8823'
+def fix_phone_num(phone_num_to_fix):
+  # can only handle numbers that are exactly 10 digits long
+  if (len(phone_num_to_fix) != 10):
+    raise ValueError("Can only format numbers that are exactly 10 digits long")
   
-  # Now check that a too short string gives a ValueError
-  with pytest.raises(ValueError):
-    fix_phone_num("51")
+  ...
