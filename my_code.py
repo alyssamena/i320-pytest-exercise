@@ -20,3 +20,10 @@ def test_fail():
     fix_phone_num('555-442-98761')
   with pytest.raises(ValueError):
     fix_phone_num('(3213) 654 3333')
+
+def test_abc():
+  with pytest.raises(ValueError):
+    fix_phone_num('334dfdee45')
+  with pytest.raises(ValueError):
+    fix_phone_num('abcdefghij')
+    
